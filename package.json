@@ -1,5 +1,5 @@
 {
-  "name": "bmgf-maps-leaflet-pdf",
+  "name": "@javid-yousaf/bmgf-maps-leaflet-pdf",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
