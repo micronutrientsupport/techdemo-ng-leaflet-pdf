@@ -10,7 +10,7 @@ pages:
   - npm install -g @angular/cli@10.1.4
   - npm install
   - ng build
-  - mv dist/* public/
+  - mv dist/bmgf-maps-leaflet-pdf/* public/
   artifacts:
     paths:
     - public
