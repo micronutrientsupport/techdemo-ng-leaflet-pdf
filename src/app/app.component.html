@@ -1,0 +1,26 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span class="title-text">BMGF Maps</span>
+</div>
+
+<div class="content" role="main">
+  <div id="mapid" class="map-container"></div>
+
+
+  <div id="htmlData" #htmlData>
+    <ul>
+      <li>HTML grabbed from specified div container</li>
+      <li>Using jspdf for pdf generation</li>
+      <li>Using leaflet-image to convert map to image and inject in to pdf</li>
+    </ul>
+  </div>
+
+  <div>
+    <button (click)="openPDF('open')" class="btn">Open PDF</button>
+    <button (click)="openPDF('save')" class="btn">Save PDF</button>
+  
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
