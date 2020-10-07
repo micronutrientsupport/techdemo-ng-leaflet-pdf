@@ -9,7 +9,7 @@ pages:
   script:
   - npm install -g @angular/cli@10.1.4
   - npm install
-  - npm buidProd
+  - npm buildProd
   artifacts:
     paths:
     - public
