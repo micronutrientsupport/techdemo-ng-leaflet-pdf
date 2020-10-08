@@ -1,11 +1,11 @@
 {
-  "name": "@javid-yousaf/bmgf-maps-leaflet-pdf",
+  "name": "techdemo-ng-leaflet-pdf",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
-    "buildProd": "ng build --base-href=/bmgf-maps-leaflet-pdf/",
+    "buildProd": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
