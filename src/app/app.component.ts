@@ -37,8 +37,8 @@ export class AppComponent implements AfterViewInit {
 
     tiles.addTo(this.map);
 
-    const marker = L.marker(mapCentre);
-    marker.addTo(this.map);
+    // const marker = L.marker(mapCentre);
+    // marker.addTo(this.map);
 
     const circle = L.circle([51.508, -0.11], {
       color: 'red',
