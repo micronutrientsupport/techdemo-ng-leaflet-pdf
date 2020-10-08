@@ -35,16 +35,20 @@ export class AppComponent implements AfterViewInit {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-    const marker = L.marker(mapCentre).addTo(this.map);
+
+    tiles.addTo(this.map);
+
+    // const marker = L.marker(mapCentre);
+    // marker.addTo(this.map);
 
     const circle = L.circle([51.508, -0.11], {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.5,
       radius: 100000
-    }).addTo(this.map);
+    });
 
-    tiles.addTo(this.map);
+    circle.addTo(this.map);
   }
 
   public openPDF(type: string): void {
