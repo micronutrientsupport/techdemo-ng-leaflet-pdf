@@ -19,6 +19,17 @@
     <button (click)="openPDF('open')" class="btn">Open PDF</button>
     <button (click)="openPDF('save')" class="btn">Save PDF</button>
   
+    
+
+  </div>
+  <div>
+    <mat-toolbar color="primary">
+      PDF Generator with PDFMake
+    </mat-toolbar>
+    
+    <button (click)="generatePDF()" mat-raised-button color="primary">
+      Generate PDF
+    </button>
   </div>
 
 </div>

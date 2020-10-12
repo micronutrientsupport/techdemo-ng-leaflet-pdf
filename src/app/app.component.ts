@@ -2,6 +2,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import * as L from 'leaflet';
 import * as jsPDF from 'jspdf';
 import * as leafletImage from 'leaflet-image';
+import { PdfDownloadService } from './pdf-download.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,10 @@ export class AppComponent implements AfterViewInit {
   public element: any;
   public map: L.Map;
 
-  constructor(private elRef: ElementRef) {
+  constructor(
+    private elRef: ElementRef,
+    private pdfService: PdfDownloadService,
+  ) {
     this.element = this.elRef.nativeElement;
   }
 
@@ -75,5 +79,14 @@ export class AppComponent implements AfterViewInit {
     });
 
   }
-
+  public generatePDF(): void {
+    leafletImage(this.map, (err, canvas) => {
+      const img = document.createElement('img');
+      const dimensions = this.map.getSize();
+      img.width = dimensions.x;
+      img.height = dimensions.y;
+      img.src = canvas.toDataURL();
+      this.pdfService.generatePdf(img.src);
+    });
+  }
 }
