@@ -41,23 +41,16 @@ export class AppComponent implements AfterViewInit {
 
     tiles.addTo(this.map);
 
-    // const marker = L.marker(mapCentre);
-    // marker.addTo(this.map);
+    const marker = L.marker(mapCentre);
+    marker.addTo(this.map);
 
-    const circle = L.circle([51.508, -0.11], {
-      color: 'red',
-      fillColor: '#f03',
-      fillOpacity: 0.5,
-      radius: 100000
-    });
-
+    const circle = L.marker([51.508, -0.11]);
     circle.addTo(this.map);
   }
 
   public openPDF(type: string): void {
 
     leafletImage(this.map, (err, canvas) => {
-
       const img = document.createElement('img');
       const dimensions = this.map.getSize();
       img.width = dimensions.x;
@@ -81,8 +74,10 @@ export class AppComponent implements AfterViewInit {
   }
   public generatePDF(): void {
     leafletImage(this.map, (err, canvas) => {
+          
       const img = document.createElement('img');
       const dimensions = this.map.getSize();
+
       img.width = dimensions.x;
       img.height = dimensions.y;
       img.src = canvas.toDataURL();
