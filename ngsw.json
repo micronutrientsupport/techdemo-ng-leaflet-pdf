@@ -1,0 +1,88 @@
+{
+  "configVersion": 1,
+  "timestamp": 1602750916450,
+  "index": "/techdemo-ng-leaflet-pdf/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/techdemo-ng-leaflet-pdf/favicon.ico",
+        "/techdemo-ng-leaflet-pdf/index.html",
+        "/techdemo-ng-leaflet-pdf/main.e7939846b11ba5c0aa16.js",
+        "/techdemo-ng-leaflet-pdf/manifest.webmanifest",
+        "/techdemo-ng-leaflet-pdf/polyfills.35a5ca1855eb057f016a.js",
+        "/techdemo-ng-leaflet-pdf/runtime.acf0dec4155e77772545.js",
+        "/techdemo-ng-leaflet-pdf/scripts.a73844de5f291be94c3b.js",
+        "/techdemo-ng-leaflet-pdf/styles.b436910319c72754dacf.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-128x128.png",
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-144x144.png",
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-152x152.png",
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-192x192.png",
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-384x384.png",
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-512x512.png",
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-72x72.png",
+        "/techdemo-ng-leaflet-pdf/assets/icons/icon-96x96.png",
+        "/techdemo-ng-leaflet-pdf/layers-2x.8f2c4d11474275fbc161.png",
+        "/techdemo-ng-leaflet-pdf/layers.416d91365b44e4b4f477.png",
+        "/techdemo-ng-leaflet-pdf/marker-icon.2b3e1faf89f94a483539.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/techdemo-ng-leaflet-pdf/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/techdemo-ng-leaflet-pdf/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/techdemo-ng-leaflet-pdf/index.html": "586a7d2ced202571b167979c707d9299c6406036",
+    "/techdemo-ng-leaflet-pdf/layers-2x.8f2c4d11474275fbc161.png": "152a162333e46d24f9d89f566312fc0c64011dee",
+    "/techdemo-ng-leaflet-pdf/layers.416d91365b44e4b4f477.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
+    "/techdemo-ng-leaflet-pdf/main.e7939846b11ba5c0aa16.js": "efe5fd6f9006cef8fa856b5acbca89f8688c299a",
+    "/techdemo-ng-leaflet-pdf/manifest.webmanifest": "6e850eb096c32dae00ba1ab7d258f18cbf3e5020",
+    "/techdemo-ng-leaflet-pdf/marker-icon.2b3e1faf89f94a483539.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
+    "/techdemo-ng-leaflet-pdf/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
+    "/techdemo-ng-leaflet-pdf/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/techdemo-ng-leaflet-pdf/scripts.a73844de5f291be94c3b.js": "c39237db09f2c597a5c7283a91f8ff3b86204e66",
+    "/techdemo-ng-leaflet-pdf/styles.b436910319c72754dacf.css": "42dd1daeb9be76fbee96ea8b99113b0db8f87181"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
