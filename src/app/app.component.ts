@@ -1,6 +1,7 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ElementRef, ViewChild } from '@angular/core';
 import * as L from 'leaflet';
 import * as jsPDF from 'jspdf';
+// import domtoimage from 'dom-to-image';
 import * as leafletImage from 'leaflet-image';
 
 @Component({
@@ -8,16 +9,29 @@ import * as leafletImage from 'leaflet-image';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
 
   @ViewChild('htmlData') htmlData: ElementRef;
+  @ViewChild('mapData') mapData: ElementRef;
+
 
   title = 'techdemo-ng-leaflet-pdf';
   public element: any;
   public map: L.Map;
+  private mapElement: any;
 
   constructor(private elRef: ElementRef) {
     this.element = this.elRef.nativeElement;
+  }
+
+  ngOnInit() {
+    const width = 100;
+    const height = 600;
+    this.mapElement = document.createElement("div");
+    this.mapElement.style.width = `${width}%`;
+    this.mapElement.style.height = `${height}px`;
+    this.mapElement.id = "mapid";
+    document.getElementById("mapContainer").appendChild(this.mapElement);
   }
 
   ngAfterViewInit() {
@@ -28,7 +42,9 @@ export class AppComponent implements AfterViewInit {
     const initZoom = 6.4;
     const mapCentre = { lat: 53.0, lng: -1.6 };
 
-    this.map = L.map('mapid', {}).setView([mapCentre.lat, mapCentre.lng], initZoom);
+    this.map = L.map('mapid', {
+      // preferCanvas: true
+    }).setView([mapCentre.lat, mapCentre.lng], initZoom);
 
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -54,6 +70,23 @@ export class AppComponent implements AfterViewInit {
 
     leafletImage(this.map, (err, canvas) => {
 
+
+      // domtoimage.toJpeg(this.mapElement).then((dataUrl) => {
+      //   const img = document.createElement('img');
+      //   img.src = dataUrl;
+  
+      //   let doc = new jsPDF('p', 'pt', 'a4');
+      //   let data = this.htmlData.nativeElement;
+      //   doc.addImage(img, 'JPEG', 15, 15, 560, 400);
+      //   doc.fromHTML(data.innerHTML, 25, 420);
+      //   if (type === 'save') {
+      //     doc.save('bmgf-maps-pdf');
+      //   } else {
+      //     window.open(doc.output('bloburl'))
+  
+      //   }
+      // });
+
       const img = document.createElement('img');
       const dimensions = this.map.getSize();
       img.width = dimensions.x;
@@ -69,7 +102,6 @@ export class AppComponent implements AfterViewInit {
       } else {
         // doc.output('dataurlnewwindow');
         window.open(doc.output('bloburl'))
-
       }
 
     });
